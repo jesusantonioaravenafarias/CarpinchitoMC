@@ -85,6 +85,11 @@ if (searchInput) {
             item.category.toLowerCase().includes(term)
         );
         renderCards(filtered);
+
+        // Scroll to results if there is a search term
+        if (term.length > 0) {
+            document.getElementById('downloads').scrollIntoView({ behavior: 'smooth' });
+        }
     });
 }
 

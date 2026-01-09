@@ -1,31 +1,10 @@
 const contentData = [
     {
-        id: 1,
-        title: "Faithful 64x64",
-        category: "Textura",
-        image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=800&auto=format&fit=crop",
-        description: "La textura clásica de Minecraft pero con mayor resolución."
-    },
-    {
-        id: 3,
-        title: "More Ores Addon",
+        title: "ACTIONS AND STUFF",
         category: "Addon",
-        image: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=800&auto=format&fit=crop",
-        description: "Añade más de 20 nuevos tipos de minerales y herramientas."
-    },
-    {
-        id: 4,
-        title: "Bare Bones",
-        category: "Textura",
-        image: "https://images.unsplash.com/photo-1614728263952-84ea206f0c41?q=80&w=800&auto=format&fit=crop",
-        description: "Texturas simples y limpias que imitan el trailer de Minecraft."
-    },
-    {
-        id: 6,
-        title: "Furniture Addon v2",
-        category: "Addon",
-        image: "https://images.unsplash.com/photo-1587573089734-09cb69c0f2b4?q=80&w=800&auto=format&fit=crop",
-        description: "Más de 100 muebles funcionales para decorar tu base."
+        description: "La mejor experiencia de animaciones y realismo para tu mundo. Última actualización disponible.",
+        thumbnail: "public/actions-stuff.jpg",
+        downloadUrl: "#"
     }
 ];
 
@@ -33,7 +12,7 @@ function createCard(item) {
     return `
         <div class="group bg-dark-800 rounded-3xl overflow-hidden border border-white/5 hover:border-emerald-500/50 transition-all hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-emerald-500/10">
             <div class="relative h-48 overflow-hidden">
-                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 <span class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                     ${item.category}
                 </span>

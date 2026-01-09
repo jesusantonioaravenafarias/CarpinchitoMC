@@ -59,11 +59,11 @@ function renderCards(data) {
             <div class="col-span-full py-20 flex flex-col items-center text-center animate-fade-in">
                 <div class="relative mb-8 group">
                     <div class="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full scale-75 group-hover:scale-100 transition-transform duration-500"></div>
-                    <img src="public/not-found.png" alt="No encontrado" class="relative h-64 w-64 object-contain drop-shadow-2xl transition-transform group-hover:rotate-6">
+                    <img src="public/not-found-new.png" alt="No encontrado" class="relative h-64 w-64 object-contain drop-shadow-2xl transition-transform group-hover:rotate-6">
                 </div>
                 <h3 class="text-3xl font-bold mb-4 text-white uppercase tracking-tighter">¡Chispas, bro! No hay nada por aquí</h3>
                 <p class="text-gray-400 max-w-md mx-auto mb-8">
-                    El carpicho buscó por todos los bloques pero no encontró esa textura o addon. Intenta con otra palabra o búscalo por categoría.
+                    El carpincho buscó por todos los bloques pero no encontró esa textura o addon. Intenta con otra palabra o búscalo por categoría.
                 </p>
                 <button onclick="resetFilter()" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/20">
                     Ver todo de nuevo

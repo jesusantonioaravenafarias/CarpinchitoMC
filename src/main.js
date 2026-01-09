@@ -105,4 +105,41 @@ function resetFilter() {
 // Initial render
 document.addEventListener('DOMContentLoaded', () => {
     renderCards(contentData);
+    initTypewriter();
 });
+
+function initTypewriter() {
+    const typewriter = document.getElementById('typewriter');
+    const texts = ["Nivel Pro", "Máximo Nivel", "Siguiente Nivel", "Estilo Único"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let speed = 150;
+
+    function type() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+            typewriter.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            speed = 50;
+        } else {
+            typewriter.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            speed = 150;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            speed = 2000; // Pause at the end
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            speed = 500;
+        }
+
+        setTimeout(type, speed);
+    }
+
+    type();
+}

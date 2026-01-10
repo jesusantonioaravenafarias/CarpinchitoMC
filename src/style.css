@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('https://cdn.jsdelivr.net/gh/mush-mc/Minecraft-Font@master/Minecraft.ttf') format('truetype');
+    src: url('../public/fonts/minecraft.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@ h6,
 button,
 input,
 textarea {
-    font-family: 'Minecraft', 'Pixelify Sans', cursive, sans-serif !important;
+    font-family: 'Minecraft', cursive, sans-serif !important;
 }
 
 /* Custom styles for CarpinchitoMC */

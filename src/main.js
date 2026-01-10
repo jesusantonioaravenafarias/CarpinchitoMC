@@ -1,7 +1,7 @@
 const contentData = [
     {
         title: "ACTIONS AND STUFF",
-        category: "Addon",
+        category: "Textura",
         description: "La mejor experiencia de animaciones y realismo para tu mundo. Última actualización disponible.",
         thumbnail: "public/actions-stuff.jpg",
         downloadUrl: "#"

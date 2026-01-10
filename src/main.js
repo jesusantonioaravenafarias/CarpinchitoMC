@@ -1,3 +1,22 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBAN1FvDzfICiR5MpaLj2Mg2yo7HsmYNFU",
+    authDomain: "carpinchitomc.firebaseapp.com",
+    projectId: "carpinchitomc",
+    storageBucket: "carpinchitomc.firebasestorage.app",
+    messagingSenderId: "728746576538",
+    appId: "1:728746576538:web:ebdaff5207a51e2987ad23",
+    measurementId: "G-VL3S4JHXNN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const contentData = [
     {
         title: "ACTIONS AND STUFF",
@@ -152,3 +171,9 @@ function initTypewriter() {
 
     type();
 }
+
+// Expose functions to global scope for HTML inline calls
+window.openModal = openModal;
+window.closeModal = closeModal;
+window.resetFilter = resetFilter;
+window.filterItems = filterItems;

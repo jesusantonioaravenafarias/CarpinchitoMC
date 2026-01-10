@@ -221,7 +221,16 @@
         </div>
     </div>
 
-    <script src="src/main.js"></script>
+    <!-- Firebase Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js",
+        "firebase/analytics": "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js"
+      }
+    }
+    </script>
+    <script type="module" src="src/main.js"></script>
 </body>
 
 </html>

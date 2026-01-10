@@ -11,8 +11,8 @@ const contentData = [
 function createCard(item) {
     return `
         <div class="group bg-dark-800 rounded-3xl overflow-hidden border border-white/5 hover:border-emerald-500/50 transition-all hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-emerald-500/10">
-            <div class="relative h-48 overflow-hidden">
-                <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="relative overflow-hidden">
+                <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-auto block transition-transform duration-500 group-hover:scale-110">
                 <span class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                     ${item.category}
                 </span>

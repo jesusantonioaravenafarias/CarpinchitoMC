@@ -19,7 +19,7 @@ function createCard(item) {
             </div>
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors uppercase tracking-tight">${item.title}</h3>
-                <p class="text-gray-400 text-sm mb-6 line-clamp-2">${item.description}</p>
+                <p class="text-gray-400 text-sm mb-6">${item.description}</p>
                 <button class="w-full py-3 bg-white/5 hover:bg-emerald-600 text-white rounded-xl font-semibold transition-all flex items-center justify-center space-x-2">
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>

@@ -20,7 +20,7 @@ function createCard(item) {
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors uppercase tracking-tight">${item.title}</h3>
                 <p class="text-gray-400 text-sm mb-6">${item.description}</p>
-                <button class="w-full py-3 bg-white/5 hover:bg-emerald-600 text-white rounded-xl font-semibold transition-all flex items-center justify-center space-x-2">
+                <button onclick="openModal('${item.title}', '${item.downloadUrl}')" class="w-full py-3 bg-white/5 hover:bg-emerald-600 text-white rounded-xl font-semibold transition-all flex items-center justify-center space-x-2">
                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                     </svg>
@@ -29,6 +29,36 @@ function createCard(item) {
             </div>
         </div>
     `;
+}
+
+let pendingDownload = null;
+
+function openModal(title, url) {
+    const modal = document.getElementById('subModal');
+    const downloadContainer = document.getElementById('downloadContainer');
+    const subBtn = document.getElementById('subBtn');
+
+    pendingDownload = url;
+    modal.classList.add('modal-active');
+    downloadContainer.classList.add('hidden');
+    subBtn.classList.remove('hidden');
+
+    // Simulate unlock after click
+    subBtn.onclick = () => {
+        setTimeout(() => {
+            subBtn.classList.add('hidden');
+            downloadContainer.classList.remove('hidden');
+            const finalLink = document.getElementById('finalDownloadLink');
+            finalLink.href = pendingDownload;
+            finalLink.onclick = () => {
+                closeModal();
+            };
+        }, 1500); // 1.5s delay to make it feel like "verification"
+    };
+}
+
+function closeModal() {
+    document.getElementById('subModal').classList.remove('modal-active');
 }
 
 function renderCards(data) {

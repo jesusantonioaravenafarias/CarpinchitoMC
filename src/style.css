@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://cdn.jsdelivr.net/gh/mush-mc/Minecraft-Font@master/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Minecraft', sans-serif !important;
+    font-family: 'Minecraft', 'Pixelify Sans', cursive, sans-serif !important;
 }
 
 /* Custom styles for CarpinchitoMC */

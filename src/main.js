@@ -4,7 +4,7 @@ const contentData = [
         category: "Textura",
         description: "La mejor experiencia de animaciones y realismo para tu mundo. Última actualización disponible.",
         thumbnail: "public/actions-stuff.jpg",
-        downloadUrl: "#"
+        downloadUrl: "https://www.mediafire.com/file/3fxa8kyb1u7qedu/Actions-and-Stuff-1.9.mcpack/file"
     }
 ];
 

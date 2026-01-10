@@ -1,22 +1,17 @@
-@font-face {
-    font-family: 'Minecraft';
-    src: url('https://cdn.jsdelivr.net/gh/dracula/minecraft-font@master/font/Minecraft.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+body,
+button,
+input,
+textarea {
+    font-family: 'Inter', sans-serif;
 }
 
-body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-button,
-input,
-textarea {
-    font-family: 'Minecraft', 'Pixelify Sans', 'Press Start 2P', cursive, sans-serif !important;
+h6 {
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 /* Custom styles for CarpinchitoMC */

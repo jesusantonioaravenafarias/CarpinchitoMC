@@ -121,13 +121,24 @@ if (searchInput) {
     });
 }
 
+function updateActiveButton(category) {
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (category === 'All' && btn.innerText === 'Todos') btn.classList.add('active');
+        if (btn.innerText === category) btn.classList.add('active');
+    });
+}
+
 function filterItems(category) {
     const filtered = contentData.filter(item => item.category === category);
     renderCards(filtered);
+    updateActiveButton(category);
 }
 
 function resetFilter() {
     renderCards(contentData);
+    updateActiveButton('All');
 }
 
 // Initial render
@@ -204,7 +215,7 @@ if (mobileSearchInput && searchInput) {
         );
         renderCards(filtered);
         if (term.length > 5) { // More threshold for mobile search auto-scroll
-             document.getElementById('downloads').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('downloads').scrollIntoView({ behavior: 'smooth' });
         }
     });
 

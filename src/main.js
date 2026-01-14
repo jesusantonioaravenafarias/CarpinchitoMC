@@ -172,8 +172,50 @@ function initTypewriter() {
     type();
 }
 
+// Mobile Menu
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const isHidden = menu.classList.contains('translate-x-full');
+
+    if (isHidden) {
+        menu.classList.remove('translate-x-full');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    } else {
+        menu.classList.add('translate-x-full');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+}
+
+// Search synchronization
+const mobileSearchInput = document.getElementById('mobileSearchInput');
+if (mobileSearchInput && searchInput) {
+    mobileSearchInput.addEventListener('input', (e) => {
+        searchInput.value = e.target.value;
+        const term = e.target.value.toLowerCase();
+        const filtered = contentData.filter(item =>
+            item.title.toLowerCase().includes(term) ||
+            item.category.toLowerCase().includes(term)
+        );
+        renderCards(filtered);
+        if (term.length > 5) { // More threshold for mobile search auto-scroll
+             document.getElementById('downloads').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        mobileSearchInput.value = e.target.value;
+    });
+}
+
 // Expose functions to global scope for HTML inline calls
 window.openModal = openModal;
 window.closeModal = closeModal;
 window.resetFilter = resetFilter;
 window.filterItems = filterItems;
+window.toggleMobileMenu = toggleMobileMenu;

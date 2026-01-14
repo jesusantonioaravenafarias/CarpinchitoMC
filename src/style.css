@@ -5,13 +5,24 @@ textarea {
     font-family: 'Inter', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Quicksand', sans-serif !important;
+h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 /* Custom styles for CarpinchitoMC */

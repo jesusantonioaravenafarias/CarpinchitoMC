@@ -88,12 +88,15 @@
                         onclick="filterItems('Addon')">Addons</a>
                 </div>
 
-                <!-- Mobile Menu Button (Icon only for now) -->
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button class="p-2 text-gray-400 hover:text-white">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button onclick="toggleMobileMenu()" class="p-2 text-gray-400 hover:text-white transition-colors">
+                        <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
@@ -106,7 +109,7 @@
         <div class="absolute inset-0 bg-emerald-500/5 blur-[120px] rounded-full -top-24 -left-24"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
             <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
+                <h1 class="font-extrabold tracking-tight mb-8 leading-tight">
                     Mejora tu Minecraft al <span id="typewriter"
                         class="bg-emerald-500 text-white px-4 rounded-xl inline-block min-w-[200px]">Nivel Pro</span>
                 </h1>
@@ -218,6 +221,23 @@
                 <button onclick="closeModal()"
                     class="mt-8 text-sm text-gray-500 hover:text-gray-300 transition-colors">Tal vez después</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-dark-900/98 backdrop-blur-xl translate-x-full transition-transform duration-500 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl font-bold">
+            <a href="#" onclick="toggleMobileMenu()" class="hover:text-emerald-500 transition-colors">Inicio</a>
+            <a href="#downloads" onclick="toggleMobileMenu(); filterItems('Textura')" class="hover:text-emerald-500 transition-colors">Texturas</a>
+            <a href="#downloads" onclick="toggleMobileMenu(); filterItems('Addon')" class="hover:text-emerald-500 transition-colors">Addons</a>
+            
+            <div class="w-full max-w-xs pt-8">
+                <div class="relative">
+                    <input type="text" id="mobileSearchInput" placeholder="Buscar..."
+                        class="w-full bg-dark-800 border border-white/10 rounded-full py-4 px-6 focus:ring-2 focus:ring-emerald-500/50 transition-all text-lg placeholder-gray-500 text-center">
+                </div>
+            </div>
+            <a href="https://www.youtube.com/@CarpinchitoMC" target="_blank" class="text-emerald-500 text-sm tracking-widest uppercase mt-12">YouTube Channel</a>
         </div>
     </div>
 

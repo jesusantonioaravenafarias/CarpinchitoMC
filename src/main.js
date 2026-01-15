@@ -125,8 +125,9 @@ function updateActiveButton(category) {
     const buttons = document.querySelectorAll('.category-btn');
     buttons.forEach(btn => {
         btn.classList.remove('active');
-        if (category === 'All' && btn.innerText === 'Todos') btn.classList.add('active');
-        if (btn.innerText === category) btn.classList.add('active');
+        if (btn.getAttribute('data-category') === category) {
+            btn.classList.add('active');
+        }
     });
 }
 

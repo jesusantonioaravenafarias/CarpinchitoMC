@@ -3,6 +3,7 @@ button,
 input,
 textarea {
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 h1 {
@@ -16,16 +17,6 @@ h2 {
 h3 {
     font-size: clamp(1.25rem, 4vw, 1.75rem);
 }
-
-body,
-button,
-input,
-textarea {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-}
-
-/* Custom styles for CarpinchitoMC */
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -93,4 +84,13 @@ body {
 
 .animate-fade-in {
     animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Category Button Highlight - THE ONE TRUE RULE */
+.category-btn.active {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    transform: scale(1.05);
 }
